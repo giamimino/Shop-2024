@@ -1,1 +1,15 @@
-@import url('../../global.css');
+@import url('../../.././global.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7e7979;
+    scroll-behavior: smooth;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 40px;
+}

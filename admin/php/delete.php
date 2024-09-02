@@ -1,29 +1,26 @@
 <?php 
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
+try {
+    $pdo = new PDO('mysql:host=localhost;port=3306;dbname=deciveDome', 'root', '');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
+    exit;
+}
 
+$id = $_GET['id'] ?? null;
+if(!$id) {
+    header('Location: admin.php');
+    exit;
+}
 
+$statement = $pdo->prepare('DELETE FROM products WHERE id = :id');
+$statement->bindValue(':id', $id);
+$statement->execute();
+
+header('Location: admin.php');
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
-
-    <!--****** style ********-->
-    <link rel="stylesheet" href="../style/delete.css">
-
-    <!--****** JavaScript ********-->
-    <script src="../script/delete.js" defer></script>
-
-    <!--****** Bootstrap ********-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-</head>
-<body>
-    
-</body>
-</html>
