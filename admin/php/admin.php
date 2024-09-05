@@ -56,6 +56,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
       <th scope="col">Image</th>
       <th scope="col">Title</th>
       <th scope="col">isSale</th>
+      <th scope="col">ID</th>
       <th scope="col">category</th>
       <th scope="col">Price</th>
       <th scope="col">Create Date</th>
@@ -73,6 +74,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
           </td>
           <td><?php echo $product['title'] ?></td>
           <td><?php echo $product['isSale'] ?></td>
+          <td><?php echo $product['id'] ?></td>
           <td><?php echo $product['category'] ?></td>
           <td><?php echo $product['price'] ?>$</td>
           <td><?php echo $product['create_date'] ?></td>
