@@ -19,6 +19,10 @@ function truncateText($text, $maxLength) {
     return strlen($text) > $maxLength ? substr($text, 0, $maxLength) . "..." : $text;
 }
 
+function truncateTexttitle($text, $maxLength) {
+    return strlen($text) > $maxLength ? substr($text, 0, $maxLength) . "..." : $text;
+}
+
 ?>
 
 
@@ -50,20 +54,120 @@ function truncateText($text, $maxLength) {
     <?php include('../assets/header/header.html'); ?>
     
     <main>
+        <br>
+        <h1 id="section1">Phone</h1><hr>
         <div class="cards">
-        <?php foreach($products as $i => $product) { ?>
+        <?php foreach($products as $i => $product) { 
+                           // Check if the product category is 'phone'
+    if ($product['category'] == 'phone') {
+?>
         <div class="card">
             <?php if ($product['image']): ?>
-            <img class="iMg" src="<?php echo '../admin/php/'.$product['image'] ?>" alt="<?php $product['title'] ?>" style="width: 100%;">
+            <img class="iMg" src="<?php echo '../admin/php/'.$product['image'] ?>" alt="<?php echo $product['title'] ?>" style="width: 100%;">
             <?php endif; ?>
-            <div class="title"><?php echo $product['title'] ?></div>
-            <div id="description" class="description"><?php echo truncateText($product['description'], 40) ?></div>
+            <div class="title"><?php echo truncateTexttitle($product['title'], 13) ?></div>
+            <div id="description" class="description"><?php echo truncateText($product['description'], 60) ?></div>
             <a href="../product-main/./index.php?id=<?php echo $product['id']; ?>" class="addCart">
             <div class="price"><?php echo $product['price'].'$' ?></div>
-            <i class="fa-solid fa-cart-plus fa-bounce"></i>
+            <i class="fa-solid fa-cart-plus"></i>
             </a>
         </div>
-        <?php } ?>
+<?php 
+    }
+} 
+?>
+        </div>
+        <br>
+        <h1 id="section2">Laptop</h1><hr>
+        <div class="cards">
+        <?php foreach($products as $i => $product) { 
+                       // Check if the product category is 'laptop'
+    if ($product['category'] == 'laptop') {
+?>
+        <div class="card">
+            <?php if ($product['image']): ?>
+            <img class="iMg" src="<?php echo '../admin/php/'.$product['image'] ?>" alt="<?php echo $product['title'] ?>" style="width: 100%;">
+            <?php endif; ?>
+            <div class="title"><?php echo truncateTexttitle($product['title'], 13) ?></div>
+            <div id="description" class="description"><?php echo truncateText($product['description'], 60) ?></div>
+            <a href="../product-main/./index.php?id=<?php echo $product['id']; ?>" class="addCart">
+            <div class="price"><?php echo $product['price'].'$' ?></div>
+            <i class="fa-solid fa-cart-plus"></i>
+            </a>
+        </div>
+<?php 
+    }
+} 
+?>
+        </div>
+        <br>
+        <h1 id="section3">KeyBoard</h1><hr>
+        <div class="cards">
+        <?php foreach($products as $i => $product) { 
+                              // Check if the product category is 'keyboard'
+    if ($product['category'] == 'keyboard') {
+?>
+        <div class="card">
+            <?php if ($product['image']): ?>
+            <img class="iMg" src="<?php echo '../admin/php/'.$product['image'] ?>" alt="<?php echo $product['title'] ?>" style="width: 100%;">
+            <?php endif; ?>
+            <div class="title"><?php echo truncateTexttitle($product['title'], 13) ?></div>
+            <div id="description" class="description"><?php echo truncateText($product['description'], 60) ?></div>
+            <a href="../product-main/./index.php?id=<?php echo $product['id']; ?>" class="addCart">
+            <div class="price"><?php echo $product['price'].'$' ?></div>
+            <i class="fa-solid fa-cart-plus"></i>
+            </a>
+        </div>
+<?php 
+    }
+} 
+?>
+        </div>
+        <br>
+        <h1 id="section4">Mouse</h1><hr>
+        <div class="cards">
+        <?php foreach($products as $i => $product) { 
+                           // Check if the product category is 'mousse'
+    if ($product['category'] == 'mouse') {
+?>
+        <div class="card">
+            <?php if ($product['image']): ?>
+            <img class="iMg" src="<?php echo '../admin/php/'.$product['image'] ?>" alt="<?php echo $product['title'] ?>" style="width: 100%;">
+            <?php endif; ?>
+            <div class="title"><?php echo truncateTexttitle($product['title'], 13) ?></div>
+            <div id="description" class="description"><?php echo truncateText($product['description'], 60) ?></div>
+            <a href="../product-main/./index.php?id=<?php echo $product['id']; ?>" class="addCart">
+            <div class="price"><?php echo $product['price'].'$' ?></div>
+            <i class="fa-solid fa-cart-plus"></i>
+            </a>
+        </div>
+<?php 
+    }
+} 
+?>
+        </div>
+        <br>
+        <h1 id="section5">headphones</h1><hr>
+        <div class="cards">
+        <?php foreach($products as $i => $product) { 
+                                // Check if the product category is 'aiarpods'
+    if ($product['category'] == 'headphones') {
+?>
+        <div class="card">
+            <?php if ($product['image']): ?>
+            <img class="iMg" src="<?php echo '../admin/php/'.$product['image'] ?>" alt="<?php echo $product['title'] ?>" style="width: 100%;">
+            <?php endif; ?>
+            <div class="title"><?php echo truncateTexttitle($product['title'], 13) ?></div>
+            <div id="description" class="description"><?php echo truncateText($product['description'], 60) ?></div>
+            <a href="../product-main/./index.php?id=<?php echo $product['id']; ?>" class="addCart">
+            <div class="price"><?php echo $product['price'].'$' ?></div>
+            <i class="fa-solid fa-cart-plus"></i>
+            </a>
+        </div>
+<?php 
+    }
+} 
+?>
         </div>
     </main>
 </body>

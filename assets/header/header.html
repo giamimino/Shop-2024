@@ -44,11 +44,57 @@ z-index: 2;
         <a href=".././admin/php/admin.php" class="menu-btn admin"><i class="fa-solid fa-lock"></i></a>
         <a href=".././cart/cart.php" type="button" class="cart"><i class="fa-solid fa-cart-shopping fa-bounce"></i></a>
 
-</div>
+        <div class="category">
+        <div id="phone" class="product phone"><i class="fa-solid fa-mobile-screen"></i></div>
+        <div id="laptop" class="product laptop"><i class="fa-solid fa-laptop"></i></div>
+        <div id="keyboard" class="product keyboard"><i class="fa-solid fa-keyboard"></i></div>
+        <div id="mouse" class="product mouse"><i class="fa-solid fa-computer-mouse"></i></div>
+        <div id="airpods" class="product airpods"><i class="fa fa-headphones"></i></div>
+        </div>
+    </div>
 </header>
 <style>
 body {
     overflow-x: hidden;
+    height: auto;
+    max-height: auto;
+}
+
+.product {
+    padding: 8px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.product::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: -1;
+    transition: all .4s ease;
+}
+
+.product:hover::before {
+    height: 100%;
+}
+
+.product:hover {
+    color: #ff872b;
+}
+
+.category {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
 }
 
 .line {
