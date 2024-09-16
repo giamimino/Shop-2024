@@ -47,7 +47,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 <p>
     <a href="create.php" type="button" class="btn btn-sm btn-success">Add Product</a>
-    <a href="../../home/./home.php" type="button" class="btn btn-sm btn-danger">Back</a>
+    <a href="../../home/./index.php" type="button" class="btn btn-sm btn-danger">Back</a>
 </p>
 <table class="table">
   <thead>

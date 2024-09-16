@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Execute the statement
     $stmt->execute();
-    header('Location: .././home/home.php');
+    header('Location: .././home/index.php');
 }
 
 
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h1 class="title"><?php echo $product['title'] ?></h1>
         <p class="description"><?php echo $product['description'] ?></p>
         <p class="price"><?php echo $product['price'].'$' ?></p>
-        <button href="" class="addCart">Add Cart</button>
+        <a href=".././cart/cart.php?id=<?php echo $product['id']; ?>" class="addCart">Add Cart</a>
         </div>
     </main>
     

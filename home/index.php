@@ -67,7 +67,7 @@ function truncateTexttitle($text, $maxLength) {
             <?php endif; ?>
             <div class="title"><?php echo truncateTexttitle($product['title'], 13) ?></div>
             <div id="description" class="description"><?php echo truncateText($product['description'], 60) ?></div>
-            <a href="../product-main/./index.php?id=<?php echo $product['id']; ?>" class="addCart">
+            <a href="../product-main/./product.php?id=<?php echo $product['id']; ?>" class="addCart">
             <div class="price"><?php echo $product['price'].'$' ?></div>
             <i class="fa-solid fa-cart-plus"></i>
             </a>
@@ -90,7 +90,7 @@ function truncateTexttitle($text, $maxLength) {
             <?php endif; ?>
             <div class="title"><?php echo truncateTexttitle($product['title'], 13) ?></div>
             <div id="description" class="description"><?php echo truncateText($product['description'], 60) ?></div>
-            <a href="../product-main/./index.php?id=<?php echo $product['id']; ?>" class="addCart">
+            <a href="../product-main/./product.php?id=<?php echo $product['id']; ?>" class="addCart">
             <div class="price"><?php echo $product['price'].'$' ?></div>
             <i class="fa-solid fa-cart-plus"></i>
             </a>
@@ -136,7 +136,7 @@ function truncateTexttitle($text, $maxLength) {
             <?php endif; ?>
             <div class="title"><?php echo truncateTexttitle($product['title'], 13) ?></div>
             <div id="description" class="description"><?php echo truncateText($product['description'], 60) ?></div>
-            <a href="../product-main/./index.php?id=<?php echo $product['id']; ?>" class="addCart">
+            <a href="../product-main/product.php?id=<?php echo $product['id']; ?>" class="addCart">
             <div class="price"><?php echo $product['price'].'$' ?></div>
             <i class="fa-solid fa-cart-plus"></i>
             </a>
@@ -159,7 +159,7 @@ function truncateTexttitle($text, $maxLength) {
             <?php endif; ?>
             <div class="title"><?php echo truncateTexttitle($product['title'], 13) ?></div>
             <div id="description" class="description"><?php echo truncateText($product['description'], 60) ?></div>
-            <a href="../product-main/./index.php?id=<?php echo $product['id']; ?>" class="addCart">
+            <a href="../product-main/./product.php?id=<?php echo $product['id']; ?>" class="addCart">
             <div class="price"><?php echo $product['price'].'$' ?></div>
             <i class="fa-solid fa-cart-plus"></i>
             </a>
